@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: #112031;
+    color: #FCB03C;
+    overflow-y: auto;
+    font-family: 'Roboto Mono', monospace;
+}
+
+main {
+    text-align: center;
+    overflow-y: auto;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer-el{
+    margin: 20px;
+    width: 150px;
+    font-size: 40px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* INPUTS */
+
+input{
+    background-color: transparent;
+    color: #FCB03C;
+    margin: 5px;
+    padding: 2px 5px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+input[type=text]{
+    text-align: center;
+    font-weight: bold; 
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #FCB03C;
+    color: white;
+    box-shadow: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  
+  width: 50px;
+  text-align: center;
+}
+
+/* BUTTONS */
+
+#controllers {
+    position: relative;
+}
+.hidden {
+    display: none;
+}
+
+button{
+    color: #112031;
+    background-color: white;
+    border-radius: 0;
+    font-size: 16px;
+    border: 1px solid #112031;
+    box-shadow: 2px 2px #FCB03C;
+    margin: 10px;
+    padding: 5px 10px;
+}
+
+button:hover, button:focus {
+    transform: translate(1px,1px);
+    box-shadow: 1px 1px #FCB03C;
+}
+
+ul{
+    list-style: none ;
+    color: white;
+    padding: 0;
+}

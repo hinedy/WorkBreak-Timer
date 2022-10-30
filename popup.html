@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>WorkBreak Timer</title>
+        <script src="node_modules\progressbar.js\dist\progressbar.js"></script>
+    </head>
+    <body>
+        <main>
+            <div class="container">
+                <div id="timer-el"></div>
+                <input type="text" id="session-label" placeholder="Work" autofocus>
+                <div>
+                    <div class="duration-input">
+                        <label for="work-duration-input">Work Duration</label>
+                         <input type="number" id="work-duration-input" name="work-duration-input" min="25" value="25" placeholder="25" >
+                    </div>
+                    <div class="duration-input">
+                        <label for="break-duration-input">Break Duration</label>
+                        <input type="number" id="break-duration-input" name="break-duration-input" min="0" value="5"  placeholder="5" >
+                    </div>
+                </div>
+                <div id="controllers">
+                    <button id="start-btn"><i class="fa-solid fa-play"></i></button>
+                    <!-- <button id="pause-btn"><i class="fa-solid fa-pause"></i></button> -->
+                    <button class="hidden" id="stop-btn"><i class="fa-solid fa-stop"></i></button>
+                </div>
+                <audio id="audio">
+                    <source src="/ding.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <div id="session-type">
+                <h3>My Sessions</h3>
+                <ul id="sessions-list"></ul>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

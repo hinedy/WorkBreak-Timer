@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,   
+    "name":"WorkBreak Timer",
+    "version": "1.0",
+    "description": "Improve productivity, Stay focused and get sh*t done",
+    "action": {},
+    "icons": {"128": "icon.png"},
+    "background": {
+        "service_worker": "background.js"
+        },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["script.js"]
+        }
+        ],
+    "permissions": [
+        "tabs",
+        "storage"
+    ]
+}
